@@ -1,0 +1,20 @@
+language: node_js
+
+# test on two node.js versions: 0.6 and 0.8
+node_js:
+  - 4.6
+  - 4.8
+
+# configure notifications (email, IRC, campfire etc)
+# please update this section to your needs!
+notifications:
+  irc: "irc.freenode.org#travis"
+  slack: 'continousintegration:bZ29JGk1Z6fAmEKdIKfUVBMo'
+
+sudo: required
+
+services:
+  - docker
+
+before_install: 
+  - docker build -t travis-CI .
