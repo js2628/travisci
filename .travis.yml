@@ -17,4 +17,4 @@ services:
   - docker
 
 before_install: 
-  - docker build -t travis-CI .
+  - docker build -t travisci .
